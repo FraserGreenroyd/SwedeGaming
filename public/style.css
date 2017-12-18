@@ -1,0 +1,25 @@
+.navigation {
+    background-color: azure;
+    padding-left:20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navigation_text {
+    font-size: 20px;
+    margin: 0px;
+    font-family: Gadugi;
+    text-align: center;
+}
+
+.no_padding {
+    padding: 0px;
+}
+
+.search_text{
+    background-color: white;
+    font-family: Gadugi;
+    font-size: 15px;
+    color:lightgrey;
+    margin: 0px;
+}
