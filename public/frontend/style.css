@@ -1,5 +1,37 @@
+body{
+    background-color: antiquewhite;
+}
+
+.game_image1{
+    width:45%;
+    height:45%;
+    margin-top: 100px;
+    margin-left: 250px;
+}
+
+.game_image2{
+    width:45%;
+    height:45%;
+    margin-top: 100px;
+    margin-left: 75px;
+}
+
+.highscores1{
+    background: white;
+    margin-left: 250px;
+    width: 45%;
+}
+
+.highscores2{
+    background: white;
+    margin-left: 75px;
+    width: 45%;
+}
+
 .main {
     background-color: antiquewhite;
+    font-family: Gadugi;
+    font-size: 15px;
 }
 
 .navigation {
@@ -26,4 +58,9 @@
     font-size: 15px;
     color:lightgrey;
     margin: 0px;
+}
+
+.space{
+    background: antiquewhite;
+    height: 20px;
 }
