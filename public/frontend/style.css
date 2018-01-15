@@ -3,29 +3,46 @@ body{
 }
 
 .game_image1{
-    width:45%;
+    width:55%;
     height:45%;
     margin-top: 100px;
-    margin-left: 250px;
+    margin-left: 120px;
 }
 
 .game_image2{
-    width:45%;
+    width:55%;
     height:45%;
     margin-top: 100px;
-    margin-left: 75px;
+    margin-left: 80px;
 }
 
 .highscores1{
     background: white;
-    margin-left: 250px;
-    width: 45%;
+    margin-left: 120px;
+    width: 55%;
 }
 
 .highscores2{
     background: white;
-    margin-left: 75px;
-    width: 45%;
+    margin-left: 80px;
+    width: 55%;
+}
+
+.login{
+    margin-top: 100px;
+}
+
+.loginheader{
+    font-size: 18px;
+    margin: 0px;
+    font-family: Gadugi;
+}
+
+.logintext{
+    font-size: 14px;
+    margin: 0px;
+    margin-bottom: 5px;
+    font-family: Gadugi;
 }
 
 .main {
