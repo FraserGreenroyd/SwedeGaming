@@ -11,6 +11,7 @@ body{
     height:45%;
     margin-top: 100px;
     margin-left: 120px;
+    border-radius: 25px;
 }
 
 .game_image2{
@@ -18,6 +19,7 @@ body{
     height:45%;
     margin-top: 100px;
     margin-left: 80px;
+    border-radius: 25px;
 }
 
 .highscores1{
