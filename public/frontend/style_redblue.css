@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(196,207,206);
+    background-color: rgb(255,255,255);
 }
 
 .break{
@@ -23,8 +23,8 @@ body{
 }
 
 .highscores1{
-    background: rgb(196,207,206);
-    color: rgb(255,255,255);
+    background: rgb(255,255,255);
+    color: rgb(63,136,129);
     margin-left: 120px;
     width: 55%;
     font-size: 18px;
@@ -32,8 +32,8 @@ body{
 }
 
 .highscores2{
-    background: rgb(196,207,206);
-    color: rgb(255,255,255);
+    background: rgb(255,255,255);
+    color: rgb(63,136,129);
     margin-left: 80px;
     width: 55%;
     font-size: 18px;
@@ -53,7 +53,7 @@ body{
     font-size: 18px;
     margin: 0px;
     font-family: Gadugi;
-    color: rgb(255,255,255);
+    color: rgb(63,136,129);
 }
 
 .logintext{
@@ -61,11 +61,11 @@ body{
     margin: 0px;
     margin-bottom: 5px;
     font-family: Gadugi;
-    color: rgb(255,255,255);
+    color: rgb(63,136,129);
 }
 
 .main {
-    background-color: rgb(196,207,206);
+    background-color: rgb(255,255,255);
     font-family: Gadugi;
     font-size: 15px;
 }
@@ -82,6 +82,7 @@ body{
     margin: 0px;
     font-family: Gadugi;
     text-align: center;
+    color: rgb(255,255,255);
 }
 
 .no_padding {
@@ -101,7 +102,7 @@ body{
 }
 
 .space{
-    background: rgb(196,207,206);
+    background: rgb(255,255,255);
     height: 20px;
 }
 
