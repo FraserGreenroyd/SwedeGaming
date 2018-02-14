@@ -1,12 +1,15 @@
 
 class snakeFood
 	{
+		{}
 		var UID = generateUID();
-		var position = generatePosition(snake);		
-		var bonusFactor = bonusFactor();
+		var position = generatePosition(snake);	
+		var bonusFactor = bonusFactor();	
+		var defaultValue = 1;
+		var value = bonusFactor*defaultValue;
 
 
-		bonus()
+		function bonusFactor()
 		{
 			var bonusFactor = 1;
 			int rand = Math.getRandomInt(0,10)
@@ -14,7 +17,7 @@ class snakeFood
 				else if (rand > 7) {bonusFactor = 2}
 		}
 
-		generatePosition(snake)
+		function generateNew(snake)
 		{
 			while(isInsnake)
 			var pos = 
@@ -35,16 +38,9 @@ class snakeFood
 		}
 
 		this.position = pos;
+		this.bonusFactor = bonusFactor();
+		
 		}
-		generateNew(snake)
-		{
-			
-
-
-		}
-
-	
-
 
 	}
 
