@@ -1,4 +1,4 @@
-class engine
+class GameEngine
 {
 	{}
 	var xSize = 30;
