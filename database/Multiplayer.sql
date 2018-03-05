@@ -1,6 +1,6 @@
 CREATE TABLE Multiplayer(
 	MultiplayerID INT NOT NULL,
-	Status varchar(45),
+	Status VARCHAR(45),
 	RequesterID int, 
 	AddresseeID int, 
 

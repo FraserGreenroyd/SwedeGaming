@@ -1,8 +1,7 @@
 CREATE TABLE LoginLog (
 	LoginLogID INT NOT NULL,
 	DateCreated DATETIME,
-	DateUpdated DATETIME,
-	LoginLogcol varchar,
+	DateClosed DATETIME,
 	UserID int,
 
 	PRIMARY KEY (LoginLogID),
