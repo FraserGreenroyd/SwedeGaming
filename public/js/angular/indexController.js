@@ -12,7 +12,7 @@ app.controller('indexController', ['$scope', 'notificationFactory', '$timeout', 
     $scope.changePage = function(page)
     {
         $scope.isLoading = true;
-        $scope.currentPage = page + '.html';
+        $scope.currentPage = 'frontend/views/' + page + '.html';
         $scope.isLoading = false;
     };
 }]);
