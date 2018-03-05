@@ -1,0 +1,112 @@
+body{
+    background-color: rgb(255,255,255);
+}
+
+.break{
+    margin-bottom: 10px;
+}
+
+.game_image1{
+    width:55%;
+    height:45%;
+    margin-top: 100px;
+    margin-left: 120px;
+    border-radius: 25px;
+}
+
+.game_image2{
+    width:55%;
+    height:45%;
+    margin-top: 100px;
+    margin-left: 80px;
+    border-radius: 25px;
+}
+
+.highscores1{
+    background: rgb(255,255,255);
+    color: rgb(244,209,179);
+    margin-left: 120px;
+    width: 55%;
+    font-size: 18px;
+    font-family: Gadugi;
+}
+
+.highscores2{
+    background: rgb(255,255,255);
+    color: rgb(244,209,179);
+    margin-left: 80px;
+    width: 55%;
+    font-size: 18px;
+    font-family: Gadugi;
+}
+
+.left{
+    float: left;
+    margin-left: 10px;
+}
+
+.login{
+    margin-top: 100px;
+}
+
+.loginheader{
+    font-size: 18px;
+    margin: 0px;
+    font-family: Gadugi;
+    color: rgb(60,42,66);
+}
+
+.logintext{
+    font-size: 14px;
+    margin: 0px;
+    margin-bottom: 5px;
+    font-family: Gadugi;
+    color: rgb(60,42,66);
+}
+
+.main {
+    background-color: rgb(255,255,255);
+    font-family: Gadugi;
+    font-size: 15px;
+}
+
+.navigation {
+    background-color: rgb(244,209,179);
+    padding-left:20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navigation_text {
+    font-size: 20px;
+    margin: 0px;
+    font-family: Gadugi;
+    text-align: center;
+    color: rgb(255,255,255);
+}
+
+.no_padding {
+    padding: 0px;
+}
+
+.right{
+    float: right;
+}
+
+.search_text{
+    background-color: white;
+    font-family: Gadugi;
+    font-size: 15px;
+    color:lightgrey;
+    margin: 0px;
+}
+
+.space{
+    background: rgb(255,255,255);
+    height: 20px;
+}
+
+.thumb{
+    width: 10%;
+    float: left;
+}
