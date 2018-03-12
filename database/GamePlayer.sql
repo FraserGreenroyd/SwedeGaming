@@ -1,4 +1,4 @@
-USE swedeuniverse
+USE swedeuniverse;
 CREATE TABLE GamePlayer (
 	GamePlayerID INT NOT NULL auto_increment,
 	UserID int,

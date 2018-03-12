@@ -1,4 +1,4 @@
-USE SwedeUniverse
+USE SwedeUniverse;
 CREATE TABLE User (
 	UserID INT NOT NULL auto_increment,
 	Username varchar(255) NOT NULL,
