@@ -1,2 +1,2 @@
 INSERT INTO User (Username, Email, EmailVerified, DateCreated, DoB,	FirstName, LastName, Password, PassHash, DateUpdated, ImageID, Active, AdminUserID)
-VALUES ('Tibbelina','hello@selmabjorklund.com','1','','','Selma','Bjorklund','selmaspass','','','','1','1')
+VALUES ('Tibbelina','hello@selmabjorklund.com','1','CURRENT_TIMESTAMP','CURRENT_TIMESTAMP','Selma','Bjorklund','selmaspass','ENCHASH','CURRENT_TIMESTAMP','123','1','1')
