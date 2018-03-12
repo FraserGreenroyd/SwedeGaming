@@ -4,10 +4,17 @@ app.controller('snakeGameController', ['$scope', 'notificationFactory', '$timeou
     $scope.canvas = null;//document.getElementById('canvas');
     $scope.context = null;
 
+    $scope.snake = null;
+
     $scope.init = function()
     {
         $scope.canvas = document.getElementById('snake-canvas');
-        context = $scope.canvas.getContext('2d');
+        $scope.context = $scope.canvas.getContext('2d');
+
+        $scope.snake = new snake();
+
+        draw($scope.snake.path);
+
         $scope.isLoading = false;
     };
 
