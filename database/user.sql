@@ -1,9 +1,9 @@
 USE SwedeUniverse
 CREATE TABLE User (
-	UserID INT NOT NULL,
+	UserID INT NOT NULL auto_increment,
 	Username varchar(255) NOT NULL,
 	Email varchar(255) NOT NULL,
-	EmailVerified bit,
+	EmailVerified bit(2),
 	DateCreated DATETIME NOT NULL,
 	DoB DATE NOT NULL,
 	FirstName varchar(255) NOT NULL,

@@ -1,5 +1,5 @@
 CREATE TABLE GamePlayer (
-	GamePlayerID INT NOT NULL,
+	GamePlayerID INT NOT NULL auto_increment,
 	UserID int,
 	GameID int,
 	MultiplayerID int,

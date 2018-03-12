@@ -1,5 +1,5 @@
 CREATE TABLE ChatPost (
-	ChatPostID INT NOT NULL,
+	ChatPostID INT NOT NULL auto_increment,
 	DateCreated DATETIME,
 	DateUpdated DATETIME,
 	Active varchar(45),

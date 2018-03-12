@@ -1,5 +1,5 @@
 CREATE TABLE InLobby (
-	InLobbyID INT NOT NULL,
+	InLobbyID INT NOT NULL AUTO_INCREMENT,
 	Status varchar(45),
 	UserID int,
 

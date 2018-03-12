@@ -1,5 +1,5 @@
 CREATE TABLE Multiplayer(
-	MultiplayerID INT NOT NULL,
+	MultiplayerID INT NOT NULL auto_increment,
 	Status VARCHAR(45),
 	RequesterID int, 
 	AddresseeID int, 

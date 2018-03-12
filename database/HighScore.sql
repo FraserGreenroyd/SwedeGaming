@@ -1,5 +1,5 @@
 CREATE TABLE HighScore (
-	HighScoreID INT NOT NULL,
+	HighScoreID INT NOT NULL auto_increment,
 	DateCreated DATETIME,
 	GameID int,
 	UserID int,

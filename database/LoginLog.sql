@@ -1,5 +1,5 @@
 CREATE TABLE LoginLog (
-	LoginLogID INT NOT NULL,
+	LoginLogID INT NOT NULL auto_increment,
 	DateCreated DATETIME,
 	DateClosed DATETIME,
 	UserID int,

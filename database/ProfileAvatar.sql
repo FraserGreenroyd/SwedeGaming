@@ -1,5 +1,5 @@
 CREATE TABLE ProfileAvatar (
-	ImageID INT NOT NULL,
+	ImageID INT NOT NULL auto_increment,
 	ImageLink varchar(255),
 
 	PRIMARY KEY (ImageID)

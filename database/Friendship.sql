@@ -1,5 +1,5 @@
 CREATE TABLE Friendship (
-	FriendshipID INT NOT NULL,
+	FriendshipID INT NOT NULL auto_increment,
 	Status bit,
 	RequesterID INT NOT NULL,
 	AddresseeID INT NOT NULL,
