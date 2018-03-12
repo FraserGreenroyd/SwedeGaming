@@ -1,15 +1,27 @@
-class GameEngine
+function GameEngine()
 {
-	{}
-	var xSize = 30;
-	var ySize = 20;
-	var frameFreq = 300; // frame update time in milisec 
-	var keyPressFreq = 30, // key press update time in milisec 
-	var updateRatio = frameFreq / keyPressFreq;
-	var frameCounter = 0;
-	var keyBeenPressed = false;
-	var score = 0;
-	var gameOver = false;
+	var xSize = null;
+	var ySize = null;
+	var frameFreq = null;// frame update time in milisec 
+	var keyPressFreq = null;// key press update time in milisec 
+	var updateRatio = null;
+	var frameCounter = null;
+	var keyBeenPressed = null;
+	var score = null;
+	var gameOver = null;
+	this.construct = function()
+	{
+		this.xSize = 600;
+		this.ySize = 400;
+		this.frameFreq = 300; // frame update time in milisec 
+		this.keyPressFreq = 30; // key press update time in milisec 
+		this.updateRatio = this.frameFreq / this.keyPressFreq;
+		this.frameCounter = 0;
+		this.keyBeenPressed = false;
+		this.score = 0;
+		this.gameOver = false;	
+	}
+	
 
 	
 
@@ -41,7 +53,7 @@ class GameEngine
 
 		function keyListener(event, snake){  
 
-		 updatedDir = snake.direction;  
+		 /*updatedDir = snake.direction;  
    		 event = window.event; 
    		 var key = event.keyCode; 
    		 if(key==38 || key == 87) { updatedDir = snake.varEnum.1;}
@@ -49,7 +61,7 @@ class GameEngine
    		 else if (key == 37 || key == 65) {updatedDir = snake.varEnum.left.3;}
    		 else if (key == 39 || key == 68) {updatedDir = snake.varEnum.right.4;}
    		 snake.direction = updatedDir;
-   		 this.keyBeenPressed = true;    
+   		 this.keyBeenPressed = true;  */  
  		 }
 
  	 function update(){
