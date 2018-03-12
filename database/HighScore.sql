@@ -1,4 +1,4 @@
-USE swedeuniverse
+USE swedeuniverse;
 CREATE TABLE HighScore (
 	HighScoreID INT NOT NULL auto_increment,
 	DateCreated DATETIME,
