@@ -9,6 +9,7 @@ function snake()
 	var thickness = null;
 	var eating = null;
 	var dirrEnum = null;
+	var steplength = null;
 
 //snake methods
 
@@ -25,6 +26,7 @@ function snake()
 		this.isAlive = true;
 		this.thickness = 1;
 		this.eating = false;
+		this.steplength = 10;
 
 		this.path = [
 		{
@@ -60,9 +62,35 @@ function snake()
 
 	]; //all coordinates occupied by the snake
 	
+	this.move = function()
+	{
+		var lastPos = this.path[this.path.length - 1];	
+		var newMouthPos ={};	
 
+			switch(this.direction)
+	{
+		case  this.dirrEnum.up:
+		newMouthPos = {x: lastPos.x, y: lastPos.y-this.steplength};
+		break;
+		case  this.dirrEnum.down:
+		newMouthPos = {x: lastPos.x, y: lastPos.y+this.steplength};
+		break;
+		case  this.dirrEnum.right:
+		newMouthPos = {x: lastPos.x+this.steplength, y: lastPos.y};
+		break;
+		case  this.dirrEnum.left:
+		newMouthPos = {x: lastPos.x-this.steplength, y: lastPos.y};
+		break;
+	}
 
-function move(snakeFood)
+		
+
+		this.path.push(newMouthPos);
+
+	
+	}
+
+/*function move(snakeFood)
 {
 	this.eating = false; 
 	var foodPos = snakeFood.position;
@@ -121,7 +149,7 @@ function move(snakeFood)
 	this.path = newpath2;
 	hasCrashed(GameEngine);
 	direction = currDir;
-}
+}*/
 
 function hasCrashed(GameEngine)
 {

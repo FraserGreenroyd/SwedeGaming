@@ -1,4 +1,4 @@
-app.controller('snakeGameController', ['$scope', 'notificationFactory', '$timeout', function($scope, notificationFactory, $timeout, $window, $http, $filter) {
+app.controller('snakeGameController', ['$scope', 'notificationFactory', '$timeout', '$interval', function($scope, notificationFactory, $timeout, $interval, $window, $http, $filter) {
     $scope.isLoading = true;
 
     $scope.canvas = null;//document.getElementById('canvas');
@@ -21,6 +21,37 @@ app.controller('snakeGameController', ['$scope', 'notificationFactory', '$timeou
         draw($scope.snake.path);
 
         $scope.isLoading = false;
+
+        $interval($scope.runSnake, 500);
+    };
+
+    $scope.runSnake = function()
+    {
+        $scope.snake.move();
+        draw($scope.snake.path);
+        //alert("Fuck you");
+    };
+
+    $scope.runSearchKeyPress = function($event)
+    {
+        alert($event.keyCode);
+        if($event.keyCode == 38)
+        {
+            $scope.snake.direction = $scope.snake.dirrEnum.up;
+        }
+        else if ($event.keyCode == 39)
+        {
+            $scope.snake.direction = $scope.snake.dirrEnum.right;
+        }
+        else if ($event.keyCode == 40)
+        {
+            $scope.snake.direction = $scope.snake.dirrEnum.down;
+        }
+        else if ($event.keyCode == 37)
+        {
+            $scope.snake.direction = $scope.snake.dirrEnum.left;
+        }
+
     };
 
     $scope.init();    
@@ -43,7 +74,6 @@ app.controller('snakeGameController', ['$scope', 'notificationFactory', '$timeou
         $scope.context.lineWidth=10;
         $scope.context.stroke();
     };
-
     //$scope.context.beginPath();
     //draw($scope.data);    
 }]);

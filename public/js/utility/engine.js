@@ -9,6 +9,7 @@ function GameEngine()
 	var keyBeenPressed = null;
 	var score = null;
 	var gameOver = null;
+	
 	this.construct = function()
 	{
 		this.xSize = 600;
