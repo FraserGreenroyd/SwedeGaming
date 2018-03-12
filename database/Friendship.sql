@@ -1,3 +1,4 @@
+USE swedeuniverse
 CREATE TABLE Friendship (
 	FriendshipID INT NOT NULL auto_increment,
 	Status bit,

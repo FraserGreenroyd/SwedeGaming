@@ -1,3 +1,4 @@
+USE swedeuniverse
 CREATE TABLE LoginLog (
 	LoginLogID INT NOT NULL auto_increment,
 	DateCreated DATETIME,

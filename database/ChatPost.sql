@@ -1,3 +1,4 @@
+USE swedeuniverse
 CREATE TABLE ChatPost (
 	ChatPostID INT NOT NULL auto_increment,
 	DateCreated DATETIME,

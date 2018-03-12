@@ -1,3 +1,4 @@
+USE swedeuniverse
 CREATE TABLE Multiplayer(
 	MultiplayerID INT NOT NULL auto_increment,
 	Status VARCHAR(45),
