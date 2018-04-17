@@ -94,6 +94,10 @@ function snake()
 		this.path.splice(0, 1);	
 
 		this.hasCrashed();
+	    if(this.isInSnake)
+	    {
+	    	//snakeFood.update();
+	    }
 	}
 
 	this.changeDirection = function(dir)
@@ -130,6 +134,14 @@ function snake()
 			this.isAlive = false;
 			alert("Game over mofo");
 		}
+	}
+
+	this.isInSnake = function(snakeFood)
+	{
+		if(snakeFood.position.x == this.path[this.path.length-1].x || snakeFood.position.y == this.path[this.path.length-1].y)
+			return true;
+		else return false;
+
 	}
 
 /*function move(snakeFood)

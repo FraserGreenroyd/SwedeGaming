@@ -3,6 +3,7 @@ app.controller('snakeGameController', ['$scope', 'notificationFactory', '$timeou
 
     $scope.canvas = null;//document.getElementById('canvas');
     $scope.context = null;
+    $scope.snakeFood = null;
 
     $scope.snake = null;
 
@@ -16,6 +17,8 @@ app.controller('snakeGameController', ['$scope', 'notificationFactory', '$timeou
 
         $scope.snake = new snake();
         $scope.snake.construct();
+        $scope.snakeFood = new snakeFood();
+        $scope.snakeFood.construct($scope.snake.engine);
         console.log($scope.snake);
 
         draw($scope.snake.path);
@@ -28,7 +31,9 @@ app.controller('snakeGameController', ['$scope', 'notificationFactory', '$timeou
     $scope.runSnake = function()
     {
         $scope.snake.move();
+        $scope.context.clearRect(0, 0, $scope.canvas.width, $scope.canvas.height);
         draw($scope.snake.path);
+        draw($scope.snakeFood.position);
         //alert("Fuck you");
     };
 
@@ -50,22 +55,36 @@ app.controller('snakeGameController', ['$scope', 'notificationFactory', '$timeou
     function draw(data) {
         console.log(data);
         if(data == undefined) return;
-        for(var i=0; i<data.length; i++) {
-            if(i > 0) {
-                drawLine(data[i], data[i-1]);               
-            }
+        if(data.length > 1)
+        {
+           for(var i=0; i<data.length; i++) {
+                if(i > 0) {
+                    drawLine(data[i], data[i-1]);               
+                }
+            } 
         }
+        else
+            drawSquare(data);
+        
     };
 
     function drawLine(data1, data2) {
-        $scope.context.clearRect(0, 0, $scope.canvas.width, $scope.canvas.height);
+        
         $scope.context.beginPath();
         $scope.context.moveTo(data1.x, data1.y);
         $scope.context.lineTo(data2.x, data2.y);
         //$scope.context.strokeStyle = "#00000";
-        $scope.context.lineWidth=10;
+        $scope.context.lineWidth=5;
         $scope.context.stroke();
     };
+
+    function drawSquare(data1)
+    {
+        $scope.context.rect(data1.x, data1.y, 5, 5);
+        $scope.context.stroke();
+
+
+    }
     //$scope.context.beginPath();
     //draw($scope.data);    
 }]);
