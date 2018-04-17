@@ -13,7 +13,7 @@
 	    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-toastr/2.1.1/angular-toastr.tpls.min.js"></script>
 
 	    <!-- CSS libraries -->
-	    <link rel="stylesheet" href="https:////code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	    <!-- <link rel="stylesheet" href="https:////code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
 	    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/angular-toastr/2.1.1/angular-toastr.min.css">
 
 	    <!-- Include our JS files -->
@@ -37,7 +37,7 @@
 	<body ng-app="swedeGaming">
 <div class="snake-game-container" ng-controller="snakeGameController">
 
-	<canvas id="snake-canvas" style="border: 1px gray solid; float: left" ng-keypress="runSearchKeyPress($event)"></canvas>
+	<canvas id="snake-canvas" style="border: 1px gray solid; float: left" tabindex="1" ng-keypress="runSearchKeyPress($event)"></canvas>
 
 </div>
 

@@ -64,30 +64,72 @@ function snake()
 	
 	this.move = function()
 	{
+		if(!this.isAlive) return;
+
 		var lastPos = this.path[this.path.length - 1];	
 		var newMouthPos ={};	
 
-			switch(this.direction)
-	{
-		case  this.dirrEnum.up:
-		newMouthPos = {x: lastPos.x, y: lastPos.y-this.steplength};
-		break;
-		case  this.dirrEnum.down:
-		newMouthPos = {x: lastPos.x, y: lastPos.y+this.steplength};
-		break;
-		case  this.dirrEnum.right:
-		newMouthPos = {x: lastPos.x+this.steplength, y: lastPos.y};
-		break;
-		case  this.dirrEnum.left:
-		newMouthPos = {x: lastPos.x-this.steplength, y: lastPos.y};
-		break;
-	}
+		switch(this.direction)
+		{
+			case  this.dirrEnum.up:
+			newMouthPos = {x: lastPos.x, y: lastPos.y-this.steplength};
+			break;
+			case  this.dirrEnum.down:
+			newMouthPos = {x: lastPos.x, y: lastPos.y+this.steplength};
+			break;
+			case  this.dirrEnum.right:
+			newMouthPos = {x: lastPos.x+this.steplength, y: lastPos.y};
+			break;
+			case  this.dirrEnum.left:
+			newMouthPos = {x: lastPos.x-this.steplength, y: lastPos.y};
+			break;
+		}
+
+		//var newpath2 = [newMouthPos];
+		//if (this.direction != currDir) newpath2.Push(path[pathLength-2]);
+		//else newpath2.push(path.slice(1, pathLength-2));		
 
 		
-
 		this.path.push(newMouthPos);
+		this.path.splice(0, 1);	
 
-	
+		this.hasCrashed();
+	}
+
+	this.changeDirection = function(dir)
+	{
+		var valid = false;
+		if(this.direction == this.dirrEnum.up || this.direction == this.dirrEnum.down)
+		{
+			if(dir != this.dirrEnum.up && dir != this.dirrEnum.down)
+			{
+				this.direction = dir;
+				valid = true;
+			}
+		}
+		else if(this.direction == this.dirrEnum.right || this.direction == this.dirrEnum.left)
+		{
+			if(dir != this.dirrEnum.right && dir != this.dirrEnum.left)
+			{
+				this.direction = dir;
+				valid = true;
+			}
+		}
+
+		if(valid)
+			this.path.push(this.path[this.path.length - 1]);
+
+		this.move();
+	}
+
+	this.hasCrashed = function()
+	{
+		var head = this.path[this.path.length -1];
+		if (head.x < 0 || head.x > this.engine.xSize || head.y < 0 || head.y > this.engine.ySize)
+		{
+			this.isAlive = false;
+			alert("Game over mofo");
+		}
 	}
 
 /*function move(snakeFood)
@@ -151,17 +193,7 @@ function snake()
 	direction = currDir;
 }*/
 
-function hasCrashed(GameEngine)
-{
-	var head = path2[0];
-	if (head[0]< 0 || head[0]>GameEngine.xSize || head[1]< 0 || head[1]>GameEngine.ySize) {engine.gameOver = true;}
-	var headX = head.x;
-	var headY = head.y;
-	for (var i = 0; i < this.path.length; i++) {
-		Things[i]
-	}
 
-}
 
 
 

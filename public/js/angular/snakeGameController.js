@@ -34,23 +34,14 @@ app.controller('snakeGameController', ['$scope', 'notificationFactory', '$timeou
 
     $scope.runSearchKeyPress = function($event)
     {
-        alert($event.keyCode);
-        if($event.keyCode == 38)
-        {
-            $scope.snake.direction = $scope.snake.dirrEnum.up;
-        }
-        else if ($event.keyCode == 39)
-        {
-            $scope.snake.direction = $scope.snake.dirrEnum.right;
-        }
-        else if ($event.keyCode == 40)
-        {
-            $scope.snake.direction = $scope.snake.dirrEnum.down;
-        }
-        else if ($event.keyCode == 37)
-        {
-            $scope.snake.direction = $scope.snake.dirrEnum.left;
-        }
+        if($event.keyCode == 119)
+            $scope.snake.changeDirection($scope.snake.dirrEnum.up);
+        else if ($event.keyCode == 100)
+            $scope.snake.changeDirection($scope.snake.dirrEnum.right);
+        else if ($event.keyCode == 115)
+            $scope.snake.changeDirection($scope.snake.dirrEnum.down);
+        else if ($event.keyCode == 97)
+            $scope.snake.changeDirection($scope.snake.dirrEnum.left);
 
     };
 
@@ -67,6 +58,7 @@ app.controller('snakeGameController', ['$scope', 'notificationFactory', '$timeou
     };
 
     function drawLine(data1, data2) {
+        $scope.context.clearRect(0, 0, $scope.canvas.width, $scope.canvas.height);
         $scope.context.beginPath();
         $scope.context.moveTo(data1.x, data1.y);
         $scope.context.lineTo(data2.x, data2.y);

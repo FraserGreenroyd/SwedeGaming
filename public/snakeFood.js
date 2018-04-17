@@ -3,7 +3,10 @@ class snakeFood
 	{
 		{}
 		var UID = generateUID();
-		var position = generatePosition(snake);	
+		var position = [{
+			x : Math.floor(this.engine.xSize/2+10),
+			y : Math.floor(this.engine.ySize/2-30)
+		}];
 		var bonusFactor = bonusFactor();	
 		var defaultValue = 1;
 		var value = bonusFactor*defaultValue;
