@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<base href="/">
+		<base href="sg">
 
 		<!-- JScript libraries -->
 		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -17,14 +17,14 @@
 	    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/angular-toastr/2.1.1/angular-toastr.min.css">
 
 	    <!-- Include our JS files -->
-	    <script src="C:/Users/eforsber/Desktop/swedegameing/SwedeGaming/public/js/utility/UID.js"></script>
-	    <script src="C:/Users/eforsber/Desktop/swedegameing/SwedeGaming/public/js/utility/engine.js"></script>
-	    <script src="C:/Users/eforsber/Desktop/swedegameing/SwedeGaming/public/js/snake_game/snake.js"></script>
-	    <script src="C:/Users/eforsber/Desktop/swedegameing/SwedeGaming/public/js/snake_game/snakeFood.js"></script>
+	    <script src="/sg/public/js/utility/UID.js"></script>
+	    <script src="/sg/public/js/utility/engine.js"></script>
+	    <script src="/sg/public/js/snake_game/snake.js"></script>
+	    <script src="/sg/public/js/snake_game/snakeFood.js"></script>
 	    
-	    <script src="C:/Users/eforsber/Desktop/swedegameing/SwedeGaming/public/js/angular/app.js"></script>
-	    <script src="C:/Users/eforsber/Desktop/swedegameing/SwedeGaming/public/js/angular/indexController.js"></script>
-	    <script src="C:/Users/eforsber/Desktop/swedegameing/SwedeGaming/public/js/angular/snakeGameController.js"></script>
+	    <script src="/sg/public/js/angular/app.js"></script>
+	    <script src="/sg/public/js/angular/indexController.js"></script>
+	    <script src="/sg/public/js/angular/snakeGameController.js"></script>
 
 
 	    <!-- Include our style sheets -->
@@ -36,7 +36,7 @@
 	</head>
 
 	<body ng-app="swedeGaming">
-<div class="snake-game-container" ng-controller="snakeGameController">
+<div ng-app="swedeGaming" class="snake-game-container" ng-controller="snakeGameController">
 
 	<canvas id="snake-canvas" style="border: 1px gray solid; float: left" tabindex="1" ng-keypress="runSearchKeyPress($event)"></canvas>
 

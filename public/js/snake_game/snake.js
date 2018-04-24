@@ -3,7 +3,7 @@ function snake()
 	var engine = null;
 	var speed = null;
 	var direction = null; //current snake direction
-	var fuck = null;
+	var uidMaker = null;
 	var snake_id = null;
 	var isAlive = null;
 	var thickness = null;
@@ -21,8 +21,8 @@ function snake()
 		this.speed = 15; //int snek sped
 		this.dirrEnum = {up:1, down:2, left:3, right:4}
 		this.direction = this.dirrEnum.up; //current snake direction
-		this.fuck = new UID();
-		this.snake_id = this.fuck.generateUID(); 
+		this.uidMaker = new UID();
+		this.snake_id = this.uidMaker.generateUID(); 
 		this.isAlive = true;
 		this.thickness = 1;
 		this.eating = false;
@@ -39,30 +39,9 @@ function snake()
 		}		
 		];
 	}
-	//snake properties
+	var path = []; //all coordinates occupied by the snake
 	
-	/*var path2 = 
-		[
-		{
-			x : Math.floor(engine.xSize/2),
-			y : Math.floor(engine.ySize/2)
-		},
-		{
-			x : Math.floor(engine.xSize/2)+1,
-			y : Math.floor(engine.ySize/2)
-		},
-		{
-			x : Math.floor(engine.xSize/2)+2,
-			y : Math.floor(engine.ySize/2)
-		}
-		]*/
-		var path = 
-		[
-		
-
-	]; //all coordinates occupied by the snake
-	
-	this.move = function()
+	this.move = function(snakeFood)
 	{
 		if(!this.isAlive) return;
 
@@ -91,13 +70,12 @@ function snake()
 
 		
 		this.path.push(newMouthPos);
-		this.path.splice(0, 1);	
 
 		this.hasCrashed();
-	    if(this.isInSnake)
-	    {
-	    	//snakeFood.update();
-	    }
+	    if(this.isInSnake(snakeFood, this.path[this.path.length - 1])) //Eating some food
+	    	snakeFood.wasEaten = true;
+	    else
+	    	this.path.splice(0, 1);	//Not eating, don't grow - remove the tail
 	}
 
 	this.changeDirection = function(dir)
@@ -132,13 +110,14 @@ function snake()
 		if (head.x < 0 || head.x > this.engine.xSize || head.y < 0 || head.y > this.engine.ySize)
 		{
 			this.isAlive = false;
-			alert("Game over mofo");
+			//alert("Game over mofo");
 		}
 	}
 
-	this.isInSnake = function(snakeFood)
+	this.isInSnake = function(snakeFood, snakePos)
 	{
-		if(snakeFood.position.x == this.path[this.path.length-1].x || snakeFood.position.y == this.path[this.path.length-1].y)
+		if(snakeFood == undefined || snakeFood.position == undefined) return false;
+		if(((snakePos.x >= (snakeFood.position.x-5)) && snakePos.x <= (snakeFood.position.x + 10)) && ((snakePos.y >= (snakeFood.position.y-5)) && (snakePos.y <= (snakeFood.position.y + 10))))
 			return true;
 		else return false;
 

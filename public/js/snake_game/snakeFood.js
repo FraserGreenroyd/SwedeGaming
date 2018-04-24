@@ -6,6 +6,7 @@ function snakeFood()
 	var defaultValue = null;
 	var value = null;
 	var engine = null;
+	var wasEaten = null;
 
 	this.construct = function(engine)
 	{
@@ -17,9 +18,8 @@ function snakeFood()
 		this.bonusFactor = this.calcBonusFactor();	
 		this.defaultValue = 1;
 		this.value = bonusFactor*defaultValue;
+		this.wasEaten = false;
 	}
-	
-
 
 	this.calcBonusFactor =function()
 	{
@@ -32,12 +32,9 @@ function snakeFood()
 
 	this.update = function(snake)
 	{
-		this.engine = new GameEngine();
-	    this.engine.construct();
-		this.x = math.getRandomInt(0,this.engine.xSize);
-		this.y = math.getRandomInt(0,this.engine.xSize);
-
-
+		this.position.x = Math.floor(Math.random() * (this.engine.xSize-10));
+		this.position.y = Math.floor(Math.random() * (this.engine.ySize-10));
+		this.wasEaten = false;
 	}
 
 }

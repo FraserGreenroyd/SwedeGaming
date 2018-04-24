@@ -19,7 +19,7 @@ app.controller('snakeGameController', ['$scope', 'notificationFactory', '$timeou
         $scope.snake.construct();
         $scope.snakeFood = new snakeFood();
         $scope.snakeFood.construct($scope.snake.engine);
-        console.log($scope.snake);
+        //console.log($scope.snake);
 
         draw($scope.snake.path);
 
@@ -30,7 +30,9 @@ app.controller('snakeGameController', ['$scope', 'notificationFactory', '$timeou
 
     $scope.runSnake = function()
     {
-        $scope.snake.move();
+        if($scope.snakeFood.wasEaten)
+            $scope.snakeFood.update();
+        $scope.snake.move($scope.snakeFood);
         $scope.context.clearRect(0, 0, $scope.canvas.width, $scope.canvas.height);
         draw($scope.snake.path);
         draw($scope.snakeFood.position);
@@ -53,7 +55,7 @@ app.controller('snakeGameController', ['$scope', 'notificationFactory', '$timeou
     $scope.init();    
     
     function draw(data) {
-        console.log(data);
+        //console.log(data);
         if(data == undefined) return;
         if(data.length > 1)
         {
