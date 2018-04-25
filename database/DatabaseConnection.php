@@ -1,7 +1,7 @@
 <?php
-$servername = "Sofias-MacBook-Pro.local";
+$servername = "localhost";
 $username = "root";
-$password = "root";
+$password = "";
 $dbname = "SwedeUniverse";
 
 // Create connection
