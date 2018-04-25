@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>    
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui/0.4.0/angular-ui-ieshiv.min.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="CSS/user-reg.css">
+
+		<script type="text/javascript">
+			var app = angular.module('userReg', []);
+
+    			app.controller('inputController', ['$scope', function($scope) {
+      				$scope.example = {
+      					text : {
+      						name : "",
+      						age : 10,
+      						pass : "off"
+      					},
+        				word: /^\s*\w*\s*$/
+      				};
+
+      				$scope.hello = function()
+      				{
+      					alert("Hello world");
+      				};
+    			}]);
+
+		</script>
+
+		<style type="text/css">
+			
+		</style>
+	</head>
+	<body>
+		<div class="bodybox" ng-app="userReg" ng-controller="inputController">
+			<h2>User Registration</h2>
+			<div class="input" ng-model="name">
+				
+				<input type="text" name="input" ng-model="example.text.name" ng-change="hello()" required ng-trim="false">
+				
+	       	</div>
+	       	<code>text = {{example.text}}</code>
+		</div>
+	</body>
+</html>
