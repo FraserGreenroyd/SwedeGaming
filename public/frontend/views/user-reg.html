@@ -11,19 +11,35 @@
 			var app = angular.module('userReg', []);
 
     			app.controller('inputController', ['$scope', function($scope) {
-      				$scope.example = {
-      					text : {
-      						name : "",
-      						age : 10,
-      						pass : "off"
-      					},
-        				word: /^\s*\w*\s*$/
+      				$scope.userinfo = {
+      					firstname : "First name",
+        				lastname: "Last name",
+						username: "Username",
+						email: "E-mail address",
+						emailver: "Verify e-mail address",
+						avatar: "",
       				};
 
       				$scope.hello = function()
       				{
       					alert("Hello world");
       				};
+
+					$scope.SelectAvatar = function(num)
+					{
+						$scope.userinfo.avatar = num;
+					};
+
+					$scope.Eq = function(dis, dat)
+					{
+						if(dis == dat) {
+							return true;
+						}
+						else {
+							return false;
+						}
+					}
+
     			}]);
 
 		</script>
@@ -35,12 +51,31 @@
 	<body>
 		<div class="bodybox" ng-app="userReg" ng-controller="inputController">
 			<h2>User Registration</h2>
-			<div class="input" ng-model="name">
-				
-				<input type="text" name="input" ng-model="example.text.name" ng-change="hello()" required ng-trim="false">
-				
-	       	</div>
-	       	<code>text = {{example.text}}</code>
+			<div class="input text">
+				<input type="text" ng-model="userinfo.firstname" required ng-trim="false">
+			</div>
+			<div class="input text">
+				<input type="text" ng-model="userinfo.lastname" required ng-trim="false">
+			</div>
+			<div class="input text">
+				<input type="text" ng-model="userinfo.username" required ng-trim="false">
+			</div>
+			<div class="input text">
+				<input type="text" ng-model="userinfo.email" required ng-trim="false">
+			</div>
+			<div class="input text">
+				<input type="text" ng-model="userinfo.emailver" required ng-trim="false">
+			</div>
+			<div class="input">
+				Pick an avatar:
+				<div class="avatars">
+					<img src="../blue.jpg" ng-click="SelectAvatar(1)" ng-selected="Eq(1,userinfo.avatar)">
+					<img src="../red.jpg" ng-click="SelectAvatar(2)" ng-selected="Eq(2,userinfo.avatar)">
+				</div>
+			</div>
+			<div class="input text">
+				<input type="date" ng-model="userinfo.dob" required ng-trim="false">
+			</div>
 		</div>
 	</body>
 </html>

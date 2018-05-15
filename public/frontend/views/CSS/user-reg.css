@@ -5,8 +5,8 @@ html {
 	display: flex;
 	justify-content: center;
 	align-content: center;
-	font-family: Avenir,"Franklin Gothic", sans-serif;
-	font-weight: lighter;
+	font-family: Arial,"Franklin Gothic", sans-serif;
+	font-weight: 300;
 }
 
 .bodybox {
@@ -22,14 +22,47 @@ html {
 }
 
 .input {
-	background-color: #222;
 	padding: 0.2em;
 	margin: 0.4em;
+	margin-left: 0;
+	font-size: 0.9em;
 }
 
 h2 {
-	font-weight: lighter;
+	font-weight: 500;
 	text-transform: uppercase;
-	letter-spacing: 5px;
-	font-stretch: ultra-expanded;
+	letter-spacing: 6px;
+	/* font-stretch: ultra-expanded; */
+	text-align: center;
+	font-family: avenir, sans-serif;
+}
+
+.text input {
+	background-color: #222;
+	color: white;
+	border: 0px;
+	border-left: 3px solid pink;
+	padding: 5px;
+	margin: 0;
+	width: 97%;
+}
+
+input:focus {
+	outline: none;
+	border-left: 3px solid maroon;
+}
+
+.avatars {
+	display: flex;
+	padding: 10px 0;
+}
+
+.avatars img {
+	height: 72px;
+	margin-right: 10px;
+	opacity: 0.3;
+}
+
+.avatars img[selected] {
+	opacity: 1;
 }
